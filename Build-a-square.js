@@ -17,3 +17,16 @@ n = 3, so I expect a 3x3 square back just like below as a string:
 function generateShape(n) {
   return ("+".repeat(n)+"\n").repeat(n).trim()
 }
+
+// or
+
+function generateShape(int) {
+  let ans='';
+  for (let i=0; i<int; ++i) {
+    for (let j=0; j<int; ++j)
+      ans+="+";
+    if (i!=int-1)
+      ans+="\n";
+  }
+  return ans;
+}
